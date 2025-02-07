@@ -1,0 +1,45 @@
+site_name: Count V's Bat Club
+site_url: https://site.demo
+theme:
+  name: material
+  font: 
+    text: Metal Mania
+    code: Xanh Mono
+  logo: assets/bat.webp
+  favicon: assets/bat.ico
+  palette:
+    # Dark mode
+    - scheme: slate
+      toggle: 
+        icon: material/toggle-switch
+        name: Dark mode
+      primary: black
+      accent: yellow
+    # Light mode
+    - scheme: default
+      toggle: 
+        icon: material/toggle-switch-off-outline
+        name: Dark mode
+      primary: yellow
+      accent: deep purple
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
